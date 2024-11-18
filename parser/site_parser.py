@@ -65,7 +65,6 @@ class SiteParser:
                 file_links.append(file_link)
             else:
                 break
-        # logging.debug(f"Parsed {len(file_links)} links from the page.")
         return file_links
 
     async def get_file_links(self) -> list:
