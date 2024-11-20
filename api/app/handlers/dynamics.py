@@ -23,7 +23,8 @@ async def dynamics(
         oil_id,
         delivery_type_id,
         delivery_basis_id,
+        session,
         start_date,
         end_date,
-        session)
+    )
     return {"results": result}

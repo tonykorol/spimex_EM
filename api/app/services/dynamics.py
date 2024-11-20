@@ -1,3 +1,4 @@
+from datetime import date, datetime
 from typing import List
 
 from sqlalchemy import select
@@ -7,12 +8,12 @@ from database.models import SpimexTradingResults
 
 
 async def get_dynamics(
-        oil_id,
-        delivery_type_id,
-        delivery_basis_id,
-        start_date,
-        end_date,
-        session: AsyncSession
+        oil_id: str,
+        delivery_type_id: str,
+        delivery_basis_id: str,
+        session: AsyncSession,
+        start_date: date = datetime.today().date(),
+        end_date: date = datetime.today().date(),
 ) -> List[SpimexTradingResults]:
 
     stmt = await session.execute(
