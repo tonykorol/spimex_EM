@@ -2,11 +2,11 @@ import asyncio
 import logging
 import time
 
-from parser.database_saver import save_to_database
-from parser.downloader import Downloader
-from parser.file_parser import get_products
-from parser.logging_config import setup_logging
-from parser.site_parser import SiteParser
+from parser_scripts.database_saver import save_to_database
+from parser_scripts.downloader import Downloader
+from parser_scripts.file_parser import get_products
+from parser_scripts.logging_config import setup_logging
+from parser_scripts.site_parser import SiteParser
 
 setup_logging()
 

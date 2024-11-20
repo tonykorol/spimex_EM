@@ -4,9 +4,9 @@ from datetime import datetime
 import xlrd
 from xlrd.sheet import Sheet
 
-from parser.data_classes import Product
+from parser_scripts.data_classes import Product
 
-download_directory = os.path.join(os.getcwd(), "parser")
+download_directory = os.path.join(os.getcwd(), "parser_scripts")
 download_folder = os.path.join(download_directory, "downloaded_files")
 products = []
 

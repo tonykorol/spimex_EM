@@ -15,7 +15,7 @@ class Downloader:
         """
         self.filename = None
         self.urls = urls
-        download_directory = os.path.join(os.getcwd(), "parser")
+        download_directory = os.path.join(os.getcwd(), "parser_scripts")
         self.download_folder = os.path.join(download_directory, "downloaded_files")
         os.makedirs(self.download_folder, exist_ok=True)
 

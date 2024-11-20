@@ -1,6 +1,6 @@
 from database.database import AsyncSession
 from database.models import SpimexTradingResults
-from parser.data_classes import Product
+from parser_scripts.data_classes import Product
 
 
 async def save_to_database(data: list[Product]) -> None:

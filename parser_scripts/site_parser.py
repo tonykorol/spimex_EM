@@ -6,7 +6,7 @@ from bs4 import BeautifulSoup
 
 
 class SiteParser:
-    PAGE_URL = "https://spimex.com/markets/oil_products/trades/results/?page=page-{0}&bxajaxid=d609bce6ada86eff0b6f7e49e6bae904"
+    _PAGE_URL = "https://spimex.com/markets/oil_products/trades/results/?page=page-{0}&bxajaxid=d609bce6ada86eff0b6f7e49e6bae904"
 
     def __init__(self, date_cutoff: datetime = datetime(2022, 12, 31)):
         """
@@ -31,7 +31,7 @@ class SiteParser:
         """
         Получает HTML страницы по заданному номеру страницы
         """
-        url = self.PAGE_URL.format(n)
+        url = self._PAGE_URL.format(n)
         async with session.get(url) as response:
             if response.status == 200:
                 return await response.text()
