@@ -15,5 +15,5 @@ async def get_last_trading_dates(count: int, session: AsyncSession) -> List[Spim
         .limit(count)
     )
     results = stmt.unique().scalars().all()
-    results = [i.date() for i in results]
+    results = [str(i.date()) for i in results]
     return results

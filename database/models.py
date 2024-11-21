@@ -21,3 +21,20 @@ class SpimexTradingResults(Base):
     date: Mapped[datetime]
     created_on: Mapped[datetime] = mapped_column(DateTime, default=datetime.now())
     updated_on: Mapped[datetime] = mapped_column(DateTime, default=datetime.now())
+
+    def to_dict(self):
+        return {
+            'id': self.id,
+            "exchange_product_id": self.exchange_product_id,
+            "exchange_product_name": self.exchange_product_name,
+            "oil_id": self.oil_id,
+            "delivery_basis_id": self.delivery_basis_id,
+            "delivery_basis_name": self.delivery_basis_name,
+            "delivery_type_id": self.delivery_type_id,
+            "volume": self.volume,
+            "total": self.total,
+            "count": self.count,
+            "date": str(self.date),
+            "created_on": str(self.created_on),
+            "updated_on": str(self.updated_on),
+        }

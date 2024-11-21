@@ -21,8 +21,7 @@ class SpimexTradingResultSchema(BaseModel):
 
 class SpimexTradingResultListSchema(BaseModel):
     results: list[SpimexTradingResultSchema]
-    # count: int
 
 
 class SpimexLastTradingDatesListSchema(BaseModel):
-    dates: list[date]
+    dates: list[str]
